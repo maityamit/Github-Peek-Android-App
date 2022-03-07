@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="15sp"
+        app:cardElevation="15sp"
+        app:cardCornerRadius="15sp"
+        android:layout_margin="15dp">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@drawable/user_card_view_back">
+
+
+                <TextView
+                    android:id="@+id/fav_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User Name"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="#254764" />
+
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/fav_user_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User ID"
+                    android:layout_marginStart="16dp"
+                    android:textSize="15sp"
+                    android:textColor="#254764" />
+
+
+
+                <ImageView
+                    android:id="@+id/fav_user_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="30dp"
+                    android:src="@drawable/ic_baseline_delete_24"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/fav_user_click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="View"
+                    android:gravity="center"
+                    android:padding="3dp"
+                    android:drawableEnd="@drawable/ic_baseline_arrow_forward_24"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/purple_500"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/background_app"/>
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

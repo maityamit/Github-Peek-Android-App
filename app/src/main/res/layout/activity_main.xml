@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_app"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="12dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_group_1"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="330dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/white_background">
+
+        <ImageView
+            android:id="@+id/github_image_1st"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/ic_icons8_github_1"/>
+
+
+        <View
+            android:id="@+id/firststview"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_alignRight="@id/github_image_1st"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="-12dp"
+            android:background="@android:color/black" />
+
+        <EditText
+            android:id="@+id/users_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:maxLines="1"
+            android:inputType="textPersonName"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@id/firststview"
+            android:background="@null"
+            android:hint="Github User Name"
+            android:gravity="center"
+            android:paddingRight="80dp"
+            android:textColor="@color/black"
+            android:textSize="19dp"
+            android:textStyle="bold"/>
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/getdetails_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        android:src="@drawable/ic_group_2"/>
+
+    <ImageView
+        android:id="@+id/liked_folder"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getdetails_1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45sp"
+        android:src="@drawable/ic_file"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/handiilay"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:text="Made by ❤ an Indian 🇮🇳"/>
+
+    <LinearLayout
+        android:id="@+id/handiilay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:onClick="LINKEDINCLICK"
+            android:src="@drawable/ic_linkedin"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_github"
+            android:onClick="GITHUBCLICK"
+            android:layout_weight="1" />
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
