@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -31,6 +32,8 @@ public class FavActivity extends AppCompatActivity {
     // variable for our adapter class and array list
     static NotesAdapter adapter;
     static ArrayList<Fav> courseModalArrayList;
+    ImageView nothing;
+
     static SharedPreferences sharedPreferences;
 
 
@@ -40,6 +43,7 @@ public class FavActivity extends AppCompatActivity {
         setContentView(R.layout.activity_fav);
 
         recyclerView = findViewById(R.id.fav_list_view);
+        nothing = findViewById(R.id.nothin_fav);
 
 
 
@@ -63,6 +67,12 @@ public class FavActivity extends AppCompatActivity {
 
 
         adapter = new NotesAdapter(courseModalArrayList, FavActivity.this);
+
+
+        if (adapter.getItemCount()!=0){
+            nothing.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.VISIBLE);
+        }
 
 
         LinearLayoutManager manager = new LinearLayoutManager(this);

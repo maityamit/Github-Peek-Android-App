@@ -43,11 +43,20 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/fav_list_view"
         android:layout_width="match_parent"
+        android:visibility="gone"
         android:layout_height="match_parent">
 
 
 
     </androidx.recyclerview.widget.RecyclerView>
+
+
+    <ImageView
+        android:id="@+id/nothin_fav"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/nothing"/>
 
 
 
