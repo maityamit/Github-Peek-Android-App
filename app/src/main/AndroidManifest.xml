@@ -11,11 +11,12 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/ic_group_1"
         android:supportsRtl="true"
+        android:exported="true"
         android:theme="@style/Theme.GithubPeek">
-        <activity android:name=".FavActivity"></activity>
+        <activity android:name=".FavActivity"/>
         <activity android:name=".RepoListActivity" />
         <activity android:name=".UserActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:exported="true" android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
