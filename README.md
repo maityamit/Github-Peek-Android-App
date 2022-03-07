@@ -21,8 +21,10 @@
 ## 📸 Screenshots
  
  
-<p align="center">
+ <p align="center">
+<img src="https://github.com/maityamit/Github-Peek-Android-App/blob/master/Demo/banner.png" width="90%" />
  <br>
+ 
 
 ||||
 |:----------------------------------------:|:-----------------------------------------:|:-----------------------------------------: |
