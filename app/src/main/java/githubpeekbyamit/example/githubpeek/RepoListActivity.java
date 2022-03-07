@@ -36,9 +36,8 @@ public class RepoListActivity extends AppCompatActivity {
     EditText edtSearch;
     ListView listView;
     SimpleArcLoader simpleArcLoader;
-    String string_link = "";
 
-    public static List<RepoModel> countryModelsList = new ArrayList<>();
+
     RepoModel countryModel;
     MyCustomAdapter myCustomAdapter;
 
@@ -48,23 +47,15 @@ public class RepoListActivity extends AppCompatActivity {
         setContentView(R.layout.activity_repo_list);
 
         Intent intent = getIntent();
-        string_link = intent.getStringExtra("REPOTYPE");
+        String string_link = intent.getStringExtra("REPOTYPE");
 
 
         listView = findViewById(R.id.listView_);
         edtSearch = findViewById(R.id.edtSearch_repo);
         simpleArcLoader = findViewById(R.id.loader_two);
 
-        fetchData();
+        fetchData(string_link);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-
-            }
-        });
 
 
         edtSearch.addTextChangedListener(new TextWatcher() {
@@ -100,10 +91,11 @@ public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     return super.onOptionsItemSelected(item);
 }
 
-    private void fetchData() {
+    private void fetchData(String string_link) {
 
 
         simpleArcLoader.start();
+       List<RepoModel> countryModelsList = new ArrayList<>();
 
         StringRequest request = new StringRequest(Request.Method.GET, string_link,
                 new Response.Listener<String>() {
@@ -166,4 +158,8 @@ public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
     }
 
+
 }
+
+
+

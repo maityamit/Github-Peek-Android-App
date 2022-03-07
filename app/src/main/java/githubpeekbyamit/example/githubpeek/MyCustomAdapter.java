@@ -116,7 +116,7 @@ public class MyCustomAdapter extends ArrayAdapter<RepoModel> {
             protected void publishResults(CharSequence constraint, FilterResults results) {
 
                 countryModelsListFiltered = (List<RepoModel>) results.values;
-                RepoListActivity.countryModelsList = (List<RepoModel>) results.values;
+                countryModelsList = (List<RepoModel>) results.values;
                 notifyDataSetChanged();
 
             }
