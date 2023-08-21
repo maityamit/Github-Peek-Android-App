@@ -2,16 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 31
+    compileSdkVersion 33
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "githubpeekbyamit.example.githubpeek"
         minSdkVersion 26
         multiDexEnabled true
-        targetSdkVersion 31
-        versionCode 2
-        versionName "1.0.0B"
+        targetSdkVersion 33
+        versionCode 3
+        versionName "1.0.0C"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
